@@ -1,0 +1,71 @@
+<div class="row">
+    <div class="col-8">
+        <div class="card">
+        <div class="card-header bg-primary">
+            <div class="row">
+                <div class="col-6 p-sm text-end">
+                    Product List
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div *ngFor="let product of categoryList" class="col-3">
+                    <div class="card">
+                        <div class="card-body">
+                          <h5 class="card-title">{{product.ProductName}}</h5>
+                          <p class="card-text">This is {{product.ProductName}}</p>
+                          <button class="btn btn-primary" (click)="showsuccess()">Order</button>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-3">
+                    <div class="card">
+                        <div class="card-body">
+                          <h5 class="card-title">Banana</h5>
+                          <p class="card-text">This is a banana</p>
+                          <a class="btn btn-primary" (click)="showsuccess()">Order</a>
+                        </div>
+                      </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-4">
+        <div class="card">
+        <div class="card-header bg-primary m-sm">
+            <div class="row">
+                <div class="col-6 p-sm text-end">
+                    Add New Products
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-6">
+                    <label for="">Product Name</label>
+                    <input type="text" [(ngModel)]="productObj.productName" class="form-control">
+                </div>
+                <div class="col-6">
+                    <label for="">Quantity</label>
+                    <input type="text" [(ngModel)]="productObj.quantity" class="form-control">
+                </div>
+                <div class="col-6">
+                    <label for="">IsActive</label>
+                    <input type="text" [(ngModel)]="productObj.isActive" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <button class="btn btn-danger"> Edit</button>
+                </div>
+                <div class="col-6">
+                    <button (click)="addproduct()" class="btn btn-danger"> Create</button>
+            </div>
+        </div>
+    </div>
+</div>

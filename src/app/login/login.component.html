@@ -1,0 +1,13 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="login.component.css"/>
+</head>
+<body>
+    <div class="log-form">
+        <h2>Login to your account</h2>
+        <form>
+          <input type="text" name="username" [(ngModel)]="loginObj.username" title="username" placeholder="username" />
+          <input type="password" name="password" [(ngModel)]="loginObj.password" title="username" placeholder="password" />
+          <button type="button" (click)="onLogin()">Login</button>
+        </form>
+      </div>
+</body>
