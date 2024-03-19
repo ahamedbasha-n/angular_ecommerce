@@ -5,6 +5,7 @@ export const Constant ={
     },
 
     API_END_POINT_PROD:"/Product/GetAllProduct/",
-    ADD_PROD:"/Product/AddProduct"
+    ADD_PROD:"/Product/AddProduct",
+    ORDER_PROD:"/Order/AddOrder"
 }
 

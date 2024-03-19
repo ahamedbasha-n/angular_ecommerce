@@ -24,4 +24,8 @@ export class ProductService {
     return this.http.post(Constant.API_END_POINT + Constant.ADD_PROD, product);
   }
 
+  orderProduct(product){
+    return this.http.post(Constant.API_END_POINT + Constant.ORDER_PROD, product);
+  }
+
 }
